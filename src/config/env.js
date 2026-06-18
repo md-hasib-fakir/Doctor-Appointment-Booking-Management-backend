@@ -1,0 +1,67 @@
+import dotenv from "dotenv";
+dotenv.config();
+
+const NODE_ENV = process.env.NODE_ENV || "development";
+const PORT = process.env.PORT || 5000;
+
+const MONGODB_URI = process.env.MONGODB_URI;
+
+const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_EXPIRE = process.env.JWT_EXPIRE;
+
+const CLIENT_URL = process.env.CLIENT_URL;
+const CORS_ORIGIN = process.env.CORS_ORIGIN;
+
+// Email Configuration
+const EMAIL_SERVICE = process.env.EMAIL_SERVICE;
+const EMAIL_USERNAME = process.env.EMAIL_USERNAME;
+const EMAIL_PASSWORD = process.env.EMAIL_PASSWORD;
+const MAIL_FROM_NAME = process.env.MAIL_FROM_NAME;
+const MAIL_FROM_EMAIL = process.env.MAIL_FROM_EMAIL;
+
+// Cloudinary Configuration
+const CLOUDINARY_NAME = process.env.CLOUDINARY_NAME;
+const CLOUDINARY_API_KEY = process.env.CLOUDINARY_API_KEY;
+const CLOUDINARY_API_SECRET = process.env.CLOUDINARY_API_SECRET;
+
+// SSLCommerz Configuration (Add these)
+const SSLCOMMERZ_SANDBOX_STORE_ID = process.env.SSLCOMMERZ_SANDBOX_STORE_ID;
+const SSLCOMMERZ_SANDBOX_STORE_PASSWORD = process.env.SSLCOMMERZ_SANDBOX_STORE_PASSWORD;
+const SSLCOMMERZ_LIVE_STORE_ID = process.env.SSLCOMMERZ_LIVE_STORE_ID;
+const SSLCOMMERZ_LIVE_STORE_PASSWORD = process.env.SSLCOMMERZ_LIVE_STORE_PASSWORD;
+
+// API URL for callbacks
+const API_URL = process.env.API_URL || `http://localhost:${PORT}`;
+
+// Default Superadmin
+const DEFAULT_SUPERADMIN_EMAIL = process.env.DEFAULT_SUPERADMIN_EMAIL;
+const DEFAULT_SUPERADMIN_PASSWORD = process.env.DEFAULT_SUPERADMIN_PASSWORD;
+const DEFAULT_SUPERADMIN_PHONE = process.env.DEFAULT_SUPERADMIN_PHONE;
+
+export {
+  NODE_ENV,
+  PORT,
+  MONGODB_URI,
+  JWT_SECRET,
+  JWT_EXPIRE,
+  CLIENT_URL,
+  CORS_ORIGIN,
+  EMAIL_SERVICE,
+  EMAIL_USERNAME,
+  EMAIL_PASSWORD,
+  MAIL_FROM_NAME,
+  MAIL_FROM_EMAIL,
+  CLOUDINARY_NAME,
+  CLOUDINARY_API_KEY,
+  CLOUDINARY_API_SECRET,
+  // SSLCommerz exports
+  SSLCOMMERZ_SANDBOX_STORE_ID,
+  SSLCOMMERZ_SANDBOX_STORE_PASSWORD,
+  SSLCOMMERZ_LIVE_STORE_ID,
+  SSLCOMMERZ_LIVE_STORE_PASSWORD,
+  API_URL,
+  // Superadmin exports
+  DEFAULT_SUPERADMIN_EMAIL,
+  DEFAULT_SUPERADMIN_PASSWORD,
+  DEFAULT_SUPERADMIN_PHONE,
+};
